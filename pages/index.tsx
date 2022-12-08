@@ -17,17 +17,15 @@ export default function Home() {
     setJobList(
       Array(10)
         .fill("X")
-        .map(() => {
-          return {
-            title: `${faker.company.name()}`,
-            img: `${faker.image.business(640, 480, true)}`,
-            tags: Array(4)
-              .fill("X")
-              .map(() => `${faker.commerce.department()}`),
-            desc: `${faker.commerce.productDescription()}`,
-            loc: `${faker.address.cityName()}`,
-          };
-        })
+        .map(() => ({
+          title: `${faker.company.name()}`,
+          img: `${faker.image.business(640, 480, true)}`,
+          tags: Array(4)
+            .fill("X")
+            .map(() => `${faker.commerce.department()}`),
+          desc: `${faker.commerce.productDescription()}`,
+          loc: `${faker.address.cityName()}`,
+        }))
     );
   }, []);
   console.log(jobList);
@@ -40,8 +38,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <h1>Internatic</h1>
-        <div className="offer-selection">
+        <h1 className={styles.title}>Internatic</h1>
+        <div className={styles.offerSelection}>
           {jobList.map((e, index) => (
             <ViewCard key={index} {...e} />
           ))}

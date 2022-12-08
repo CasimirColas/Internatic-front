@@ -1,0 +1,46 @@
+.viewcard {
+  margin-inline: 28px;
+}
+
+.card {
+  height: 800px;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid pink;
+}
+.favButton {
+  position: absolute;
+  left: 422px;
+  top: 28px;
+}
+
+.title {
+  height: 10%;
+  vertical-align: center;
+}
+
+.viewContent {
+  width: inherit;
+  height: 80%;
+}
+
+.imgContainer {
+  overflow: hidden;
+}
+
+.prevImg {
+}
+
+.tagsList {
+}
+
+.tag {
+}
+
+.description {
+}
+
+.loc {
+}

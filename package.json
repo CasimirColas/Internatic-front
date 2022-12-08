@@ -5,6 +5,7 @@
   "scripts": {
     "setup": "npm install && husky install && npm husky add .husky/pre-commit \" npm eslint . && npm prettier --write .\"",
     "dev": "next dev",
+    "server": "next dev -H",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
